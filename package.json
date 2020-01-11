@@ -9,6 +9,7 @@
   "author": "Felipe Botelho",
   "license": "ISC",
   "dependencies": {
+    "consign": "^0.1.6",
     "express": "^4.17.1",
     "jest": "^24.9.0",
     "save-dev": "0.0.1-security"
