@@ -12,4 +12,17 @@ test("Deve listar todos os usuários", () => {
                 //verifica se o retorno tem a propriedade e valor igual a tall
                 expect(resposta.body[0]).toHaveProperty("name", "Felipe");
             })
-})
+});
+
+
+test("Deve inserir um usuário com sucesso!", () => {
+    return request(app).post("/users/create")
+            .send({
+                name: "Biah",
+                mail: "bi@ah.com.br"
+            })
+            .then((response) => {
+                expect(response.status).toBe(200);
+                expect(response.body.name).toBe("Biah")
+            });
+});
